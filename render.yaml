@@ -1,0 +1,39 @@
+# Presentation deployment: no API keys or passwords are committed.
+# Free instances use ephemeral storage; export results before a restart.
+services:
+  - type: web
+    name: journeygraph-ai
+    runtime: docker
+    repo: https://github.com/lachaiahgarivaishnavi18-droid/JourneyGraph-AI
+    branch: main
+    plan: free
+    region: singapore
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /api/health
+    autoDeployTrigger: commit
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: PORT
+        value: "10000"
+      - key: DATABASE_URL
+        value: sqlite:////app/storage/journeygraph.db
+      - key: CHECKPOINT_DB
+        value: /app/storage/checkpoints.db
+      - key: SEED_DEMO
+        value: "true"
+      - key: ADMIN_EMAIL
+        value: admin@journeygraph.local
+      - key: ADMIN_PASSWORD
+        generateValue: true
+      - key: JWT_SECRET
+        generateValue: true
+      - key: PYTHONUNBUFFERED
+        value: "1"
+      - key: OMP_NUM_THREADS
+        value: "1"
+      - key: OPENBLAS_NUM_THREADS
+        value: "1"
+      - key: MKL_NUM_THREADS
+        value: "1"

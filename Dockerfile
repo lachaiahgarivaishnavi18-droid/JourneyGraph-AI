@@ -13,9 +13,10 @@ RUN pip install --no-cache-dir -r requirements.txt && useradd --create-home appu
 COPY backend/ ./backend/
 COPY --from=frontend /build/frontend/dist ./frontend/dist
 COPY data/ ./data/
+COPY scripts/start-container.sh ./scripts/start-container.sh
 RUN mkdir /app/storage && chown -R appuser:appuser /app
 USER appuser
-ENV DATABASE_URL=sqlite:////app/storage/journeygraph.db CHECKPOINT_DB=/app/storage/checkpoints.db
+ENV PORT=8000 DATABASE_URL=sqlite:////app/storage/journeygraph.db CHECKPOINT_DB=/app/storage/checkpoints.db
 EXPOSE 8000
-HEALTHCHECK --interval=30s --timeout=5s --start-period=180s CMD python -c "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/health')"
-CMD ["sh", "-c", "python -m alembic -c backend/alembic.ini upgrade head && python -m uvicorn backend.app.main:app --host 0.0.0.0 --port 8000"]
+HEALTHCHECK --interval=30s --timeout=5s --start-period=180s CMD python -c "import os, urllib.request; urllib.request.urlopen('http://127.0.0.1:' + os.getenv('PORT', '8000') + '/api/health', timeout=4)"
+CMD ["sh", "/app/scripts/start-container.sh"]
