@@ -166,6 +166,11 @@ See [validation evidence](docs/VALIDATION.md) for executed checks and limits.
 
 ## Docker
 
+For both the React frontend and Python backend on Vercel, see
+[Vercel deployment](docs/VERCEL_DEPLOYMENT.md). The repository root is configured
+as a FastAPI project that builds and serves React, with PostgreSQL for persistent
+application data.
+
 For a shareable presentation deployment, the repository includes a Render
 Blueprint. See [Render deployment instructions](docs/RENDER_DEPLOYMENT.md) for
 generated credentials, deployment checks, and the free plan's storage limits.

@@ -11,9 +11,11 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
 from fastapi.staticfiles import StaticFiles
 from sqlalchemy import select, func
+from sqlalchemy.orm import Session
 from sqlalchemy.exc import IntegrityError
 from pydantic import ValidationError, BaseModel, Field
-from .database import Base, engine, get_db, SessionLocal, now
+from .database import Base, engine, get_db, SessionLocal, now, IS_VERCEL
+from .deployment import serverless_bootstrap
 from .models import User, Customer, CustomerEvent, Product, Execution, AgentOutput, ImportRecord, AuditLog, Report, Setting, Recommendation
 from .schemas import Credentials, CustomerInput, EventInput, RunInput, QueryInput, utc
 from .security import current_user, editor, admin, hash_password, verify_password, token, rate_limit, audit
@@ -28,14 +30,10 @@ def serialize(obj):
     return {c.name: getattr(obj, c.name) for c in obj.__table__.columns}
 
 
-@asynccontextmanager
-async def lifespan(app):
-    if os.getenv('APP_ENV') == 'test':
-        yield
-        return
+def initialize_application(connection=None):
     if os.getenv('APP_ENV') != 'production':
         Base.metadata.create_all(engine)
-    with SessionLocal() as db:
+    with (Session(bind=connection, expire_on_commit=False) if connection is not None else SessionLocal()) as db:
         email = os.getenv('ADMIN_EMAIL', 'admin@journeygraph.local')
         if not db.scalar(select(User).where(User.email == email)):
             password = os.getenv('ADMIN_PASSWORD')
@@ -52,6 +50,15 @@ async def lifespan(app):
             seed_demo(db)
             segment_customers(db)
             db.commit()
+
+
+@asynccontextmanager
+async def lifespan(app):
+    if os.getenv('APP_ENV') == 'test':
+        yield
+        return
+    with serverless_bootstrap(engine, IS_VERCEL) as connection:
+        initialize_application(connection)
     yield
 
 
@@ -380,9 +387,10 @@ def llm(payload: QueryInput, request: Request, user=Depends(current_user), db=De
 async def parse_import(file, kind, mapping):
     if kind not in ('customers', 'events'):
         raise HTTPException(422, 'Import kind must be customers or events')
-    raw = await file.read(5 * 1024 * 1024 + 1)
-    if len(raw) > 5 * 1024 * 1024:
-        raise HTTPException(413, 'Maximum file size is 5 MB')
+    limit = (4 if IS_VERCEL else 5) * 1024 * 1024
+    raw = await file.read(limit + 1)
+    if len(raw) > limit:
+        raise HTTPException(413, f'Maximum file size is {limit // (1024 * 1024)} MB')
     try:
         text = raw.decode('utf-8-sig')
         extension = Path(file.filename or '').suffix.lower()
@@ -514,7 +522,7 @@ def export_report(id_: str, format: str = 'json', user=Depends(current_user), db
 
 @app.get('/api/settings')
 def settings(user=Depends(current_user), db=Depends(get_db)):
-    return {'llm': {'configured': bool(os.getenv('LLM_API_KEY')), 'model': os.getenv('LLM_MODEL', 'gpt-4.1-mini'), 'mode': 'external-llm' if os.getenv('LLM_API_KEY') else 'local-evidence-summary'}, 'graph': {'storage': 'SQL temporal tables + NetworkX', 'neo4j_configured': bool(os.getenv('NEO4J_URI'))}, 'settings': {s.key: s.value for s in db.scalars(select(Setting))}, 'data_sources': dict(__import__('collections').Counter(e.source for e in events_query(db)))}
+    return {'limits': {'import_max_mb': 4 if IS_VERCEL else 5}, 'llm': {'configured': bool(os.getenv('LLM_API_KEY')), 'model': os.getenv('LLM_MODEL', 'gpt-4.1-mini'), 'mode': 'external-llm' if os.getenv('LLM_API_KEY') else 'local-evidence-summary'}, 'graph': {'storage': 'SQL temporal tables + NetworkX', 'neo4j_configured': bool(os.getenv('NEO4J_URI'))}, 'settings': {s.key: s.value for s in db.scalars(select(Setting))}, 'data_sources': dict(__import__('collections').Counter(e.source for e in events_query(db)))}
 
 
 class SettingsInput(BaseModel):

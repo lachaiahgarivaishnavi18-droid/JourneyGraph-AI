@@ -1,0 +1,21 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "fastapi",
+  "functions": {
+    "backend/app/main.py": {
+      "maxDuration": 300,
+      "includeFiles": "{frontend/dist/**,backend/migrations/**,backend/alembic.ini}",
+      "excludeFiles": "{.git/**,.venv/**,.pnpm-store/**,.pytest*/**,frontend/node_modules/**,frontend/e2e/**,frontend/test-results/**,backend/tests/**,docs/**,output/**,tmp/**,**/*.db,**/*.db-shm,**/*.db-wal,.env,.env.*}"
+    }
+  },
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {"key": "X-Content-Type-Options", "value": "nosniff"},
+        {"key": "X-Frame-Options", "value": "DENY"},
+        {"key": "Referrer-Policy", "value": "same-origin"}
+      ]
+    }
+  ]
+}

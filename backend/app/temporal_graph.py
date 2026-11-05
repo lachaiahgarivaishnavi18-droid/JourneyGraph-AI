@@ -13,18 +13,28 @@ class GraphStore(Protocol):
     def snapshot(self, at=None, known_at=None, customer_id=None): ...
 
 
-def ingest_edge(db, event):
+def event_graph_records(event):
+    """Shared event projection for API ingestion and batched demo initialization."""
     source = f'customer:{event.customer_id}'
     kind = 'product' if event.event_type in ('product_view', 'add_to_cart', 'purchase', 'return') else ('campaign' if event.event_type == 'email_open' else 'touchpoint')
     target = f'{kind}:{event.entity_id}'
-    for id_, type_, label in [(source, 'customer', event.customer_id), (target, kind, event.entity_id), (f'channel:{event.channel}', 'channel', event.channel)]:
-        if not db.get(GraphEntity, id_):
-            db.add(GraphEntity(id=id_, kind=type_, label=label))
-    db.flush()
+    entities = [{'id': id_, 'kind': type_, 'label': label} for id_, type_, label in [(source, 'customer', event.customer_id), (target, kind, event.entity_id), (f'channel:{event.channel}', 'channel', event.channel)]]
+    relationships = []
     for suffix, destination, relation in [('entity', target, RELATIONS.get(event.event_type, 'CUSTOMER_' + event.event_type.upper())), ('channel', f'channel:{event.channel}', 'CUSTOMER_USED_CHANNEL')]:
         id_ = f'{event.id}:{suffix}'
-        if not db.get(GraphRelationship, id_):
-            db.add(GraphRelationship(id=id_, source=source, target=destination, relation=relation, event_id=event.id, valid_from=event.event_time, valid_to=event.valid_to, recorded_at=event.recorded_at, provenance={'source': event.source, 'event_type': event.event_type, 'channel': event.channel}))
+        relationships.append(dict(id=id_, source=source, target=destination, relation=relation, event_id=event.id, valid_from=event.event_time, valid_to=event.valid_to, recorded_at=event.recorded_at, provenance={'source': event.source, 'event_type': event.event_type, 'channel': event.channel}))
+    return entities, relationships
+
+
+def ingest_edge(db, event):
+    entities, relationships = event_graph_records(event)
+    for row in entities:
+        if not db.get(GraphEntity, row['id']):
+            db.add(GraphEntity(**row))
+    db.flush()
+    for row in relationships:
+        if not db.get(GraphRelationship, row['id']):
+            db.add(GraphRelationship(**row))
     db.flush()
 
 

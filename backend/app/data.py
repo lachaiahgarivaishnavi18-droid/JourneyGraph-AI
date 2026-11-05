@@ -3,11 +3,11 @@ import json
 from datetime import datetime, timedelta, timezone
 from uuid import uuid4
 from pathlib import Path
-from sqlalchemy import select
+from sqlalchemy import select, insert
 from .database import now
-from .models import Customer, CustomerEvent, Product, Channel, Campaign, Order, SupportInteraction
+from .models import Customer, CustomerEvent, Product, Channel, Campaign, Order, SupportInteraction, GraphEntity, GraphRelationship
 from .schemas import EventInput, utc
-from .temporal_graph import ingest_edge
+from .temporal_graph import ingest_edge, event_graph_records
 
 CHANNELS = ['website', 'mobile', 'email', 'ads', 'support', 'social']
 
@@ -79,7 +79,28 @@ def seed_demo(db, export_dir=None):
                 sequence += 1
                 payload = {'event_id': f'EVT{sequence:06}', 'customer_id': customer['id'], 'event_type': type_, 'entity_id': 'CMP01' if type_ == 'email_open' else product[0], 'channel': 'support' if type_ == 'support' else ('email' if type_ == 'email_open' else channel), 'event_time': utc((when + timedelta(minutes=position * 4)).isoformat()), 'properties': {'amount': product[3]} if type_ in ('purchase', 'return') else {'category': product[2]}}
                 events.append(payload)
-                add_event(db, EventInput(**payload), 'synthetic-demo')
+    # Avoid per-event network round trips when cold-starting against managed
+    # PostgreSQL. API/file ingestion still uses the validated add_event path.
+    event_rows, relationship_rows, order_rows, support_rows = [], [], [], []
+    entities = {}
+    for payload in events:
+        parsed = EventInput(**payload)
+        row = dict(id=parsed.event_id, **parsed.model_dump(exclude={'event_id'}), recorded_at=utc(now()), source='synthetic-demo')
+        event_rows.append(row)
+        nodes, edges = event_graph_records(CustomerEvent(**row))
+        entities.update({n['id']: n for n in nodes})
+        relationship_rows.extend(edges)
+        if parsed.event_type == 'purchase':
+            order_rows.append(dict(id='order-' + row['id'], event_id=row['id'], customer_id=row['customer_id'], product_id=row['entity_id'], amount=float(row['properties'].get('amount', 0)), ordered_at=row['event_time']))
+        elif parsed.event_type == 'support':
+            support_rows.append(dict(id='ticket-' + row['id'], event_id=row['id'], customer_id=row['customer_id'], status='open'))
+    db.execute(insert(CustomerEvent), event_rows)
+    db.execute(insert(GraphEntity), list(entities.values()))
+    db.execute(insert(GraphRelationship), relationship_rows)
+    if order_rows:
+        db.execute(insert(Order), order_rows)
+    if support_rows:
+        db.execute(insert(SupportInteraction), support_rows)
     db.commit()
     if export_dir:
         import csv
