@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 # JourneyGraph-AI
-=======
-# JourneyGraph AI
 
 An academic customer journey intelligence application with a React dashboard,
 FastAPI API, SQL-backed temporal knowledge graph, nine-agent LangGraph workflow,
@@ -198,4 +195,3 @@ Neo4j/provider integrations require verification in their target environment.
 
 See [architecture](docs/ARCHITECTURE.md), [API guide](docs/API.md), and
 [implementation plan](docs/IMPLEMENTATION_PLAN.md).
->>>>>>> 9371235 (Initial JoruneyGrapg AI project)
