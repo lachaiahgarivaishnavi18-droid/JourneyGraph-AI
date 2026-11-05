@@ -1,0 +1,1668 @@
+{
+  "id": "b11ffaa0-c556-4bdc-b6c2-2a310581fa18",
+  "customer_id": "DEMO-IMPORT-001",
+  "status": "completed",
+  "started_at": "2026-11-05T04:18:26.136678Z",
+  "finished_at": "2026-11-05T04:18:29.833663Z",
+  "outputs": {
+    "profiling": {
+      "profiles": [
+        {
+          "id": "DEMO-IMPORT-001",
+          "name": "Import Demo Customer",
+          "region": "South",
+          "source": "synthetic-demo",
+          "created_at": "2026-11-05T04:17:06.952512Z",
+          "recency_days": 3,
+          "frequency": 1,
+          "monetary": 149,
+          "touchpoints": 4,
+          "channels": 2,
+          "segment": "New buyers",
+          "preferred_products": [
+            {
+              "product_id": "P001",
+              "interactions": 2
+            }
+          ],
+          "last_seen": "2026-11-01T10:12:00.000000Z"
+        }
+      ]
+    },
+    "tracking": {
+      "customer_id": "DEMO-IMPORT-001",
+      "events": [
+        {
+          "id": "DEMO-IMPORT-E01",
+          "customer_id": "DEMO-IMPORT-001",
+          "event_type": "website_visit",
+          "entity_id": "P001",
+          "channel": "website",
+          "event_time": "2026-11-01T10:00:00.000000Z",
+          "recorded_at": "2026-11-05T04:17:22.360961Z",
+          "valid_to": null,
+          "properties": {
+            "synthetic": true
+          },
+          "source": "synthetic-demo",
+          "sequence": 1,
+          "stage": "Awareness"
+        },
+        {
+          "id": "DEMO-IMPORT-E02",
+          "customer_id": "DEMO-IMPORT-001",
+          "event_type": "product_view",
+          "entity_id": "P001",
+          "channel": "website",
+          "event_time": "2026-11-01T10:04:00.000000Z",
+          "recorded_at": "2026-11-05T04:17:22.385767Z",
+          "valid_to": null,
+          "properties": {
+            "synthetic": true
+          },
+          "source": "synthetic-demo",
+          "sequence": 2,
+          "stage": "Acquisition"
+        },
+        {
+          "id": "DEMO-IMPORT-E03",
+          "customer_id": "DEMO-IMPORT-001",
+          "event_type": "add_to_cart",
+          "entity_id": "P001",
+          "channel": "mobile",
+          "event_time": "2026-11-01T10:08:00.000000Z",
+          "recorded_at": "2026-11-05T04:17:22.399917Z",
+          "valid_to": null,
+          "properties": {
+            "synthetic": true
+          },
+          "source": "synthetic-demo",
+          "sequence": 3,
+          "stage": "Consideration"
+        },
+        {
+          "id": "DEMO-IMPORT-E04",
+          "customer_id": "DEMO-IMPORT-001",
+          "event_type": "purchase",
+          "entity_id": "P001",
+          "channel": "mobile",
+          "event_time": "2026-11-01T10:12:00.000000Z",
+          "recorded_at": "2026-11-05T04:17:22.417993Z",
+          "valid_to": null,
+          "properties": {
+            "amount": 149,
+            "synthetic": true
+          },
+          "source": "synthetic-demo",
+          "sequence": 4,
+          "stage": "Conversion"
+        }
+      ],
+      "channel_transitions": 1,
+      "duration_days": 0.01
+    },
+    "graph": {
+      "relationships": 8,
+      "patterns": [
+        {
+          "path": [
+            "website_visit",
+            "product_view"
+          ],
+          "customers": 121
+        },
+        {
+          "path": [
+            "product_view",
+            "add_to_cart"
+          ],
+          "customers": 120
+        },
+        {
+          "path": [
+            "product_view",
+            "website_visit"
+          ],
+          "customers": 118
+        },
+        {
+          "path": [
+            "add_to_cart",
+            "purchase"
+          ],
+          "customers": 113
+        },
+        {
+          "path": [
+            "email_open",
+            "website_visit"
+          ],
+          "customers": 112
+        },
+        {
+          "path": [
+            "add_to_cart",
+            "website_visit"
+          ],
+          "customers": 111
+        },
+        {
+          "path": [
+            "purchase",
+            "website_visit"
+          ],
+          "customers": 102
+        },
+        {
+          "path": [
+            "product_view",
+            "email_open"
+          ],
+          "customers": 82
+        },
+        {
+          "path": [
+            "support",
+            "website_visit"
+          ],
+          "customers": 68
+        },
+        {
+          "path": [
+            "purchase",
+            "email_open"
+          ],
+          "customers": 67
+        },
+        {
+          "path": [
+            "add_to_cart",
+            "email_open"
+          ],
+          "customers": 65
+        },
+        {
+          "path": [
+            "purchase",
+            "review"
+          ],
+          "customers": 57
+        },
+        {
+          "path": [
+            "purchase",
+            "return"
+          ],
+          "customers": 49
+        },
+        {
+          "path": [
+            "review",
+            "website_visit"
+          ],
+          "customers": 43
+        },
+        {
+          "path": [
+            "product_view",
+            "support"
+          ],
+          "customers": 41
+        },
+        {
+          "path": [
+            "purchase",
+            "support"
+          ],
+          "customers": 38
+        },
+        {
+          "path": [
+            "return",
+            "website_visit"
+          ],
+          "customers": 35
+        },
+        {
+          "path": [
+            "add_to_cart",
+            "support"
+          ],
+          "customers": 34
+        },
+        {
+          "path": [
+            "support",
+            "email_open"
+          ],
+          "customers": 24
+        },
+        {
+          "path": [
+            "review",
+            "email_open"
+          ],
+          "customers": 19
+        }
+      ]
+    },
+    "behavior": {
+      "event_counts": {
+        "website_visit": 1,
+        "product_view": 1,
+        "add_to_cart": 1,
+        "purchase": 1
+      },
+      "unusual_sessions": []
+    },
+    "segmentation": {
+      "method": "RFM rules: inactive >30d; champions >=5 purchases; returning >=2; new buyer >=1; explorer otherwise",
+      "assignments": [
+        {
+          "customer_id": "C001",
+          "recency_days": 4,
+          "frequency": 8,
+          "monetary": 1002,
+          "touchpoints": 62,
+          "channels": 6,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C002",
+          "recency_days": 11,
+          "frequency": 7,
+          "monetary": 813,
+          "touchpoints": 44,
+          "channels": 6,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C003",
+          "recency_days": 161,
+          "frequency": 0,
+          "monetary": 0,
+          "touchpoints": 4,
+          "channels": 1,
+          "segment": "Inactive"
+        },
+        {
+          "customer_id": "C004",
+          "recency_days": 1,
+          "frequency": 9,
+          "monetary": 941,
+          "touchpoints": 75,
+          "channels": 6,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C005",
+          "recency_days": 14,
+          "frequency": 7,
+          "monetary": 1013,
+          "touchpoints": 58,
+          "channels": 6,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C006",
+          "recency_days": 5,
+          "frequency": 8,
+          "monetary": 792,
+          "touchpoints": 57,
+          "channels": 5,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C007",
+          "recency_days": 9,
+          "frequency": 6,
+          "monetary": 734,
+          "touchpoints": 41,
+          "channels": 5,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C008",
+          "recency_days": 17,
+          "frequency": 6,
+          "monetary": 644,
+          "touchpoints": 59,
+          "channels": 6,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C009",
+          "recency_days": 3,
+          "frequency": 11,
+          "monetary": 1509,
+          "touchpoints": 69,
+          "channels": 5,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C010",
+          "recency_days": 1,
+          "frequency": 10,
+          "monetary": 1220,
+          "touchpoints": 96,
+          "channels": 6,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C011",
+          "recency_days": 5,
+          "frequency": 8,
+          "monetary": 952,
+          "touchpoints": 66,
+          "channels": 6,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C012",
+          "recency_days": 1,
+          "frequency": 4,
+          "monetary": 466,
+          "touchpoints": 40,
+          "channels": 6,
+          "segment": "Returning"
+        },
+        {
+          "customer_id": "C013",
+          "recency_days": 95,
+          "frequency": 1,
+          "monetary": 149,
+          "touchpoints": 24,
+          "channels": 6,
+          "segment": "Inactive"
+        },
+        {
+          "customer_id": "C014",
+          "recency_days": 10,
+          "frequency": 9,
+          "monetary": 841,
+          "touchpoints": 67,
+          "channels": 6,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C015",
+          "recency_days": 2,
+          "frequency": 11,
+          "monetary": 1229,
+          "touchpoints": 78,
+          "channels": 6,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C016",
+          "recency_days": 113,
+          "frequency": 0,
+          "monetary": 0,
+          "touchpoints": 13,
+          "channels": 4,
+          "segment": "Inactive"
+        },
+        {
+          "customer_id": "C017",
+          "recency_days": 15,
+          "frequency": 3,
+          "monetary": 357,
+          "touchpoints": 29,
+          "channels": 5,
+          "segment": "Returning"
+        },
+        {
+          "customer_id": "C018",
+          "recency_days": 30,
+          "frequency": 1,
+          "monetary": 229,
+          "touchpoints": 37,
+          "channels": 6,
+          "segment": "New buyers"
+        },
+        {
+          "customer_id": "C019",
+          "recency_days": 21,
+          "frequency": 5,
+          "monetary": 675,
+          "touchpoints": 68,
+          "channels": 6,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C020",
+          "recency_days": 14,
+          "frequency": 7,
+          "monetary": 763,
+          "touchpoints": 64,
+          "channels": 6,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C021",
+          "recency_days": 27,
+          "frequency": 0,
+          "monetary": 0,
+          "touchpoints": 30,
+          "channels": 5,
+          "segment": "Explorers"
+        },
+        {
+          "customer_id": "C022",
+          "recency_days": 5,
+          "frequency": 2,
+          "monetary": 238,
+          "touchpoints": 46,
+          "channels": 6,
+          "segment": "Returning"
+        },
+        {
+          "customer_id": "C023",
+          "recency_days": 156,
+          "frequency": 1,
+          "monetary": 99,
+          "touchpoints": 7,
+          "channels": 2,
+          "segment": "Inactive"
+        },
+        {
+          "customer_id": "C024",
+          "recency_days": 8,
+          "frequency": 4,
+          "monetary": 646,
+          "touchpoints": 52,
+          "channels": 5,
+          "segment": "Returning"
+        },
+        {
+          "customer_id": "C025",
+          "recency_days": 15,
+          "frequency": 9,
+          "monetary": 1071,
+          "touchpoints": 60,
+          "channels": 6,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C026",
+          "recency_days": 66,
+          "frequency": 7,
+          "monetary": 953,
+          "touchpoints": 60,
+          "channels": 6,
+          "segment": "Inactive"
+        },
+        {
+          "customer_id": "C027",
+          "recency_days": 0,
+          "frequency": 10,
+          "monetary": 1550,
+          "touchpoints": 83,
+          "channels": 6,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C028",
+          "recency_days": 20,
+          "frequency": 5,
+          "monetary": 465,
+          "touchpoints": 50,
+          "channels": 6,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C029",
+          "recency_days": 2,
+          "frequency": 12,
+          "monetary": 1588,
+          "touchpoints": 72,
+          "channels": 5,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C030",
+          "recency_days": 14,
+          "frequency": 2,
+          "monetary": 238,
+          "touchpoints": 32,
+          "channels": 3,
+          "segment": "Returning"
+        },
+        {
+          "customer_id": "C031",
+          "recency_days": 2,
+          "frequency": 12,
+          "monetary": 1258,
+          "touchpoints": 73,
+          "channels": 5,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C032",
+          "recency_days": 4,
+          "frequency": 9,
+          "monetary": 1101,
+          "touchpoints": 65,
+          "channels": 6,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C033",
+          "recency_days": 11,
+          "frequency": 8,
+          "monetary": 1162,
+          "touchpoints": 54,
+          "channels": 5,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C034",
+          "recency_days": 94,
+          "frequency": 0,
+          "monetary": 0,
+          "touchpoints": 20,
+          "channels": 5,
+          "segment": "Inactive"
+        },
+        {
+          "customer_id": "C035",
+          "recency_days": 0,
+          "frequency": 9,
+          "monetary": 961,
+          "touchpoints": 71,
+          "channels": 6,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C036",
+          "recency_days": 15,
+          "frequency": 4,
+          "monetary": 406,
+          "touchpoints": 43,
+          "channels": 6,
+          "segment": "Returning"
+        },
+        {
+          "customer_id": "C037",
+          "recency_days": 33,
+          "frequency": 1,
+          "monetary": 89,
+          "touchpoints": 24,
+          "channels": 5,
+          "segment": "Inactive"
+        },
+        {
+          "customer_id": "C038",
+          "recency_days": 34,
+          "frequency": 2,
+          "monetary": 178,
+          "touchpoints": 27,
+          "channels": 4,
+          "segment": "Inactive"
+        },
+        {
+          "customer_id": "C039",
+          "recency_days": 1,
+          "frequency": 9,
+          "monetary": 1151,
+          "touchpoints": 66,
+          "channels": 6,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C040",
+          "recency_days": 21,
+          "frequency": 2,
+          "monetary": 118,
+          "touchpoints": 39,
+          "channels": 4,
+          "segment": "Returning"
+        },
+        {
+          "customer_id": "C041",
+          "recency_days": 13,
+          "frequency": 6,
+          "monetary": 834,
+          "touchpoints": 50,
+          "channels": 6,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C042",
+          "recency_days": 0,
+          "frequency": 5,
+          "monetary": 735,
+          "touchpoints": 54,
+          "channels": 4,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C043",
+          "recency_days": 53,
+          "frequency": 4,
+          "monetary": 346,
+          "touchpoints": 50,
+          "channels": 6,
+          "segment": "Inactive"
+        },
+        {
+          "customer_id": "C044",
+          "recency_days": 9,
+          "frequency": 4,
+          "monetary": 496,
+          "touchpoints": 48,
+          "channels": 6,
+          "segment": "Returning"
+        },
+        {
+          "customer_id": "C045",
+          "recency_days": 1,
+          "frequency": 5,
+          "monetary": 755,
+          "touchpoints": 42,
+          "channels": 5,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C046",
+          "recency_days": 9,
+          "frequency": 5,
+          "monetary": 575,
+          "touchpoints": 49,
+          "channels": 6,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C047",
+          "recency_days": 1,
+          "frequency": 13,
+          "monetary": 1737,
+          "touchpoints": 80,
+          "channels": 6,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C048",
+          "recency_days": 2,
+          "frequency": 4,
+          "monetary": 596,
+          "touchpoints": 50,
+          "channels": 5,
+          "segment": "Returning"
+        },
+        {
+          "customer_id": "C049",
+          "recency_days": 0,
+          "frequency": 5,
+          "monetary": 505,
+          "touchpoints": 61,
+          "channels": 6,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C050",
+          "recency_days": 6,
+          "frequency": 6,
+          "monetary": 724,
+          "touchpoints": 56,
+          "channels": 6,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C051",
+          "recency_days": 9,
+          "frequency": 6,
+          "monetary": 644,
+          "touchpoints": 52,
+          "channels": 6,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C052",
+          "recency_days": 36,
+          "frequency": 6,
+          "monetary": 654,
+          "touchpoints": 45,
+          "channels": 6,
+          "segment": "Inactive"
+        },
+        {
+          "customer_id": "C053",
+          "recency_days": 3,
+          "frequency": 6,
+          "monetary": 764,
+          "touchpoints": 69,
+          "channels": 6,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C054",
+          "recency_days": 9,
+          "frequency": 4,
+          "monetary": 516,
+          "touchpoints": 43,
+          "channels": 6,
+          "segment": "Returning"
+        },
+        {
+          "customer_id": "C055",
+          "recency_days": 0,
+          "frequency": 10,
+          "monetary": 1190,
+          "touchpoints": 76,
+          "channels": 5,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C056",
+          "recency_days": 15,
+          "frequency": 1,
+          "monetary": 89,
+          "touchpoints": 32,
+          "channels": 6,
+          "segment": "New buyers"
+        },
+        {
+          "customer_id": "C057",
+          "recency_days": 17,
+          "frequency": 5,
+          "monetary": 715,
+          "touchpoints": 49,
+          "channels": 6,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C058",
+          "recency_days": 3,
+          "frequency": 9,
+          "monetary": 1001,
+          "touchpoints": 67,
+          "channels": 6,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C059",
+          "recency_days": 14,
+          "frequency": 10,
+          "monetary": 1080,
+          "touchpoints": 94,
+          "channels": 6,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C060",
+          "recency_days": 7,
+          "frequency": 5,
+          "monetary": 475,
+          "touchpoints": 59,
+          "channels": 6,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C061",
+          "recency_days": 13,
+          "frequency": 12,
+          "monetary": 1318,
+          "touchpoints": 79,
+          "channels": 6,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C062",
+          "recency_days": 12,
+          "frequency": 7,
+          "monetary": 963,
+          "touchpoints": 67,
+          "channels": 5,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C063",
+          "recency_days": 32,
+          "frequency": 2,
+          "monetary": 238,
+          "touchpoints": 31,
+          "channels": 4,
+          "segment": "Inactive"
+        },
+        {
+          "customer_id": "C064",
+          "recency_days": 17,
+          "frequency": 11,
+          "monetary": 1289,
+          "touchpoints": 66,
+          "channels": 6,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C065",
+          "recency_days": 0,
+          "frequency": 0,
+          "monetary": 0,
+          "touchpoints": 30,
+          "channels": 5,
+          "segment": "Explorers"
+        },
+        {
+          "customer_id": "C066",
+          "recency_days": 90,
+          "frequency": 3,
+          "monetary": 337,
+          "touchpoints": 26,
+          "channels": 5,
+          "segment": "Inactive"
+        },
+        {
+          "customer_id": "C067",
+          "recency_days": 9,
+          "frequency": 9,
+          "monetary": 771,
+          "touchpoints": 88,
+          "channels": 6,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C068",
+          "recency_days": 1,
+          "frequency": 5,
+          "monetary": 515,
+          "touchpoints": 66,
+          "channels": 6,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C069",
+          "recency_days": 4,
+          "frequency": 2,
+          "monetary": 458,
+          "touchpoints": 33,
+          "channels": 4,
+          "segment": "Returning"
+        },
+        {
+          "customer_id": "C070",
+          "recency_days": 23,
+          "frequency": 12,
+          "monetary": 1358,
+          "touchpoints": 74,
+          "channels": 6,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C071",
+          "recency_days": 5,
+          "frequency": 8,
+          "monetary": 782,
+          "touchpoints": 67,
+          "channels": 6,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C072",
+          "recency_days": 4,
+          "frequency": 1,
+          "monetary": 229,
+          "touchpoints": 35,
+          "channels": 4,
+          "segment": "New buyers"
+        },
+        {
+          "customer_id": "C073",
+          "recency_days": 16,
+          "frequency": 10,
+          "monetary": 950,
+          "touchpoints": 70,
+          "channels": 6,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C074",
+          "recency_days": 3,
+          "frequency": 10,
+          "monetary": 1610,
+          "touchpoints": 82,
+          "channels": 6,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C075",
+          "recency_days": 51,
+          "frequency": 0,
+          "monetary": 0,
+          "touchpoints": 24,
+          "channels": 4,
+          "segment": "Inactive"
+        },
+        {
+          "customer_id": "C076",
+          "recency_days": 3,
+          "frequency": 6,
+          "monetary": 674,
+          "touchpoints": 47,
+          "channels": 6,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C077",
+          "recency_days": 63,
+          "frequency": 7,
+          "monetary": 833,
+          "touchpoints": 56,
+          "channels": 6,
+          "segment": "Inactive"
+        },
+        {
+          "customer_id": "C078",
+          "recency_days": 1,
+          "frequency": 6,
+          "monetary": 724,
+          "touchpoints": 80,
+          "channels": 6,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C079",
+          "recency_days": 5,
+          "frequency": 11,
+          "monetary": 1229,
+          "touchpoints": 84,
+          "channels": 6,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C080",
+          "recency_days": 9,
+          "frequency": 7,
+          "monetary": 633,
+          "touchpoints": 60,
+          "channels": 5,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C081",
+          "recency_days": 18,
+          "frequency": 11,
+          "monetary": 1159,
+          "touchpoints": 63,
+          "channels": 5,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C082",
+          "recency_days": 0,
+          "frequency": 9,
+          "monetary": 1061,
+          "touchpoints": 64,
+          "channels": 5,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C083",
+          "recency_days": 27,
+          "frequency": 1,
+          "monetary": 149,
+          "touchpoints": 29,
+          "channels": 4,
+          "segment": "New buyers"
+        },
+        {
+          "customer_id": "C084",
+          "recency_days": 103,
+          "frequency": 0,
+          "monetary": 0,
+          "touchpoints": 23,
+          "channels": 5,
+          "segment": "Inactive"
+        },
+        {
+          "customer_id": "C085",
+          "recency_days": 11,
+          "frequency": 8,
+          "monetary": 912,
+          "touchpoints": 59,
+          "channels": 6,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C086",
+          "recency_days": 3,
+          "frequency": 7,
+          "monetary": 833,
+          "touchpoints": 65,
+          "channels": 6,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C087",
+          "recency_days": 8,
+          "frequency": 9,
+          "monetary": 831,
+          "touchpoints": 65,
+          "channels": 5,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C088",
+          "recency_days": 114,
+          "frequency": 3,
+          "monetary": 517,
+          "touchpoints": 27,
+          "channels": 5,
+          "segment": "Inactive"
+        },
+        {
+          "customer_id": "C089",
+          "recency_days": 129,
+          "frequency": 1,
+          "monetary": 89,
+          "touchpoints": 14,
+          "channels": 4,
+          "segment": "Inactive"
+        },
+        {
+          "customer_id": "C090",
+          "recency_days": 8,
+          "frequency": 11,
+          "monetary": 1069,
+          "touchpoints": 85,
+          "channels": 6,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C091",
+          "recency_days": 4,
+          "frequency": 7,
+          "monetary": 1143,
+          "touchpoints": 62,
+          "channels": 6,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C092",
+          "recency_days": 1,
+          "frequency": 11,
+          "monetary": 1949,
+          "touchpoints": 86,
+          "channels": 6,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C093",
+          "recency_days": 12,
+          "frequency": 7,
+          "monetary": 853,
+          "touchpoints": 65,
+          "channels": 6,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C094",
+          "recency_days": 5,
+          "frequency": 10,
+          "monetary": 1300,
+          "touchpoints": 72,
+          "channels": 6,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C095",
+          "recency_days": 4,
+          "frequency": 4,
+          "monetary": 386,
+          "touchpoints": 44,
+          "channels": 6,
+          "segment": "Returning"
+        },
+        {
+          "customer_id": "C096",
+          "recency_days": 19,
+          "frequency": 1,
+          "monetary": 149,
+          "touchpoints": 32,
+          "channels": 4,
+          "segment": "New buyers"
+        },
+        {
+          "customer_id": "C097",
+          "recency_days": 8,
+          "frequency": 6,
+          "monetary": 824,
+          "touchpoints": 63,
+          "channels": 5,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C098",
+          "recency_days": 2,
+          "frequency": 6,
+          "monetary": 1004,
+          "touchpoints": 53,
+          "channels": 6,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C099",
+          "recency_days": 106,
+          "frequency": 1,
+          "monetary": 119,
+          "touchpoints": 36,
+          "channels": 6,
+          "segment": "Inactive"
+        },
+        {
+          "customer_id": "C100",
+          "recency_days": 10,
+          "frequency": 6,
+          "monetary": 594,
+          "touchpoints": 46,
+          "channels": 5,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C101",
+          "recency_days": 7,
+          "frequency": 3,
+          "monetary": 477,
+          "touchpoints": 49,
+          "channels": 6,
+          "segment": "Returning"
+        },
+        {
+          "customer_id": "C102",
+          "recency_days": 49,
+          "frequency": 0,
+          "monetary": 0,
+          "touchpoints": 18,
+          "channels": 5,
+          "segment": "Inactive"
+        },
+        {
+          "customer_id": "C103",
+          "recency_days": 9,
+          "frequency": 9,
+          "monetary": 811,
+          "touchpoints": 65,
+          "channels": 6,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C104",
+          "recency_days": 2,
+          "frequency": 8,
+          "monetary": 1112,
+          "touchpoints": 66,
+          "channels": 5,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C105",
+          "recency_days": 59,
+          "frequency": 1,
+          "monetary": 89,
+          "touchpoints": 36,
+          "channels": 6,
+          "segment": "Inactive"
+        },
+        {
+          "customer_id": "C106",
+          "recency_days": 56,
+          "frequency": 7,
+          "monetary": 743,
+          "touchpoints": 41,
+          "channels": 4,
+          "segment": "Inactive"
+        },
+        {
+          "customer_id": "C107",
+          "recency_days": 115,
+          "frequency": 1,
+          "monetary": 99,
+          "touchpoints": 31,
+          "channels": 4,
+          "segment": "Inactive"
+        },
+        {
+          "customer_id": "C108",
+          "recency_days": 1,
+          "frequency": 9,
+          "monetary": 1331,
+          "touchpoints": 87,
+          "channels": 6,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C109",
+          "recency_days": 13,
+          "frequency": 11,
+          "monetary": 1699,
+          "touchpoints": 76,
+          "channels": 5,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C110",
+          "recency_days": 3,
+          "frequency": 1,
+          "monetary": 149,
+          "touchpoints": 35,
+          "channels": 6,
+          "segment": "New buyers"
+        },
+        {
+          "customer_id": "C111",
+          "recency_days": 19,
+          "frequency": 12,
+          "monetary": 1848,
+          "touchpoints": 83,
+          "channels": 6,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C112",
+          "recency_days": 8,
+          "frequency": 4,
+          "monetary": 676,
+          "touchpoints": 35,
+          "channels": 5,
+          "segment": "Returning"
+        },
+        {
+          "customer_id": "C113",
+          "recency_days": 3,
+          "frequency": 8,
+          "monetary": 752,
+          "touchpoints": 56,
+          "channels": 5,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C114",
+          "recency_days": 3,
+          "frequency": 5,
+          "monetary": 735,
+          "touchpoints": 46,
+          "channels": 5,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C115",
+          "recency_days": 1,
+          "frequency": 10,
+          "monetary": 1060,
+          "touchpoints": 64,
+          "channels": 6,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C116",
+          "recency_days": 44,
+          "frequency": 2,
+          "monetary": 298,
+          "touchpoints": 38,
+          "channels": 6,
+          "segment": "Inactive"
+        },
+        {
+          "customer_id": "C117",
+          "recency_days": 1,
+          "frequency": 3,
+          "monetary": 527,
+          "touchpoints": 41,
+          "channels": 5,
+          "segment": "Returning"
+        },
+        {
+          "customer_id": "C118",
+          "recency_days": 7,
+          "frequency": 7,
+          "monetary": 883,
+          "touchpoints": 74,
+          "channels": 6,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "C119",
+          "recency_days": 12,
+          "frequency": 2,
+          "monetary": 248,
+          "touchpoints": 53,
+          "channels": 6,
+          "segment": "Returning"
+        },
+        {
+          "customer_id": "C120",
+          "recency_days": 18,
+          "frequency": 10,
+          "monetary": 1520,
+          "touchpoints": 80,
+          "channels": 6,
+          "segment": "Champions"
+        },
+        {
+          "customer_id": "DEMO-IMPORT-001",
+          "recency_days": 3,
+          "frequency": 1,
+          "monetary": 149,
+          "touchpoints": 4,
+          "channels": 2,
+          "segment": "New buyers"
+        }
+      ]
+    },
+    "prediction": {
+      "churn": {
+        "status": "evaluated",
+        "kind": "churn",
+        "model": "StandardScaler + balanced logistic regression",
+        "target": "No events in next 30 days (inactivity proxy)",
+        "metrics": {
+          "roc_auc": 0.855,
+          "balanced_accuracy": 0.776,
+          "brier_score": 0.1557,
+          "baseline_accuracy": 0.8,
+          "train_customers": 120,
+          "test_customers": 120,
+          "test_positive_rate": 0.2,
+          "train_features_until": "2026-09-05T19:20:00+00:00",
+          "train_labels_until": "2026-10-05T19:20:00+00:00",
+          "holdout_features_until": "2026-10-05T19:20:00+00:00",
+          "holdout_labels_until": "2026-11-04T19:20:00+00:00"
+        },
+        "scores": [
+          {
+            "customer_id": "DEMO-IMPORT-001",
+            "score": 0.3837,
+            "risk": "Low",
+            "features": {
+              "recency_days": 3.3805555555555555,
+              "events_30d": 4,
+              "purchases_30d": 1,
+              "cart_events_30d": 1,
+              "support_events_30d": 0,
+              "channels_30d": 2
+            },
+            "explanations": [
+              {
+                "feature": "events_30d",
+                "log_odds_contribution": 0.521
+              },
+              {
+                "feature": "recency_days",
+                "log_odds_contribution": -0.506
+              },
+              {
+                "feature": "support_events_30d",
+                "log_odds_contribution": 0.445
+              }
+            ],
+            "confidence": "Uncalibrated score; uncertainty intervals unavailable"
+          }
+        ],
+        "limitations": [
+          "Single forward temporal holdout; customers may appear in both windows.",
+          "Synthetic-data performance is demonstration only, not production validation.",
+          "Scores are not calibrated probabilities or causal estimates.",
+          "No-event labels require complete tracking; observation gaps can resemble churn."
+        ]
+      },
+      "conversion": {
+        "status": "evaluated",
+        "kind": "conversion",
+        "model": "StandardScaler + balanced logistic regression",
+        "target": "Purchase within next 30 days",
+        "metrics": {
+          "roc_auc": 0.7796,
+          "balanced_accuracy": 0.7556,
+          "brier_score": 0.1813,
+          "baseline_accuracy": 0.625,
+          "train_customers": 120,
+          "test_customers": 120,
+          "test_positive_rate": 0.625,
+          "train_features_until": "2026-09-05T19:20:00+00:00",
+          "train_labels_until": "2026-10-05T19:20:00+00:00",
+          "holdout_features_until": "2026-10-05T19:20:00+00:00",
+          "holdout_labels_until": "2026-11-04T19:20:00+00:00"
+        },
+        "scores": [
+          {
+            "customer_id": "DEMO-IMPORT-001",
+            "score": 0.6096,
+            "risk": "Medium",
+            "features": {
+              "recency_days": 3.3805555555555555,
+              "events_30d": 4,
+              "purchases_30d": 1,
+              "cart_events_30d": 1,
+              "support_events_30d": 0,
+              "channels_30d": 2
+            },
+            "explanations": [
+              {
+                "feature": "recency_days",
+                "log_odds_contribution": 0.258
+              },
+              {
+                "feature": "events_30d",
+                "log_odds_contribution": 0.212
+              },
+              {
+                "feature": "channels_30d",
+                "log_odds_contribution": -0.061
+              }
+            ],
+            "confidence": "Uncalibrated score; uncertainty intervals unavailable"
+          }
+        ],
+        "limitations": [
+          "Single forward temporal holdout; customers may appear in both windows.",
+          "Synthetic-data performance is demonstration only, not production validation.",
+          "Scores are not calibrated probabilities or causal estimates.",
+          "No-event labels require complete tracking; observation gaps can resemble churn."
+        ]
+      }
+    },
+    "recommendation": {
+      "actions": [
+        {
+          "customer_id": "DEMO-IMPORT-001",
+          "action": "Review relevant product follow-up",
+          "reason": "Observed 1 purchases and 4 touchpoints.",
+          "priority": "Normal",
+          "objective": "Improve engagement through a human-reviewed intervention",
+          "evidence_ids": [
+            "DEMO-IMPORT-E01",
+            "DEMO-IMPORT-E02",
+            "DEMO-IMPORT-E03",
+            "DEMO-IMPORT-E04"
+          ],
+          "products": [
+            {
+              "product_id": "P001",
+              "interactions": 2
+            }
+          ],
+          "status": "pending_human_review",
+          "expected_uplift": "Not estimated; requires a controlled experiment"
+        }
+      ],
+      "approval_required": true
+    },
+    "insight": {
+      "mode": "local-evidence-summary",
+      "operation": "patterns",
+      "narrative": "The most frequent consecutive transition is website_visit → product_view, observed for 121 distinct customers. Pattern counts describe chronology, not a causal relationship.",
+      "evidence": {
+        "paths": [
+          {
+            "path": "website_visit → product_view → add_to_cart → purchase",
+            "customers": 1
+          }
+        ],
+        "patterns": [
+          {
+            "path": [
+              "website_visit",
+              "product_view"
+            ],
+            "customers": 121
+          },
+          {
+            "path": [
+              "product_view",
+              "add_to_cart"
+            ],
+            "customers": 120
+          },
+          {
+            "path": [
+              "product_view",
+              "website_visit"
+            ],
+            "customers": 118
+          },
+          {
+            "path": [
+              "add_to_cart",
+              "purchase"
+            ],
+            "customers": 113
+          },
+          {
+            "path": [
+              "email_open",
+              "website_visit"
+            ],
+            "customers": 112
+          },
+          {
+            "path": [
+              "add_to_cart",
+              "website_visit"
+            ],
+            "customers": 111
+          },
+          {
+            "path": [
+              "purchase",
+              "website_visit"
+            ],
+            "customers": 102
+          },
+          {
+            "path": [
+              "product_view",
+              "email_open"
+            ],
+            "customers": 82
+          },
+          {
+            "path": [
+              "support",
+              "website_visit"
+            ],
+            "customers": 68
+          },
+          {
+            "path": [
+              "purchase",
+              "email_open"
+            ],
+            "customers": 67
+          },
+          {
+            "path": [
+              "add_to_cart",
+              "email_open"
+            ],
+            "customers": 65
+          },
+          {
+            "path": [
+              "purchase",
+              "review"
+            ],
+            "customers": 57
+          },
+          {
+            "path": [
+              "purchase",
+              "return"
+            ],
+            "customers": 49
+          },
+          {
+            "path": [
+              "review",
+              "website_visit"
+            ],
+            "customers": 43
+          },
+          {
+            "path": [
+              "product_view",
+              "support"
+            ],
+            "customers": 41
+          },
+          {
+            "path": [
+              "purchase",
+              "support"
+            ],
+            "customers": 38
+          },
+          {
+            "path": [
+              "return",
+              "website_visit"
+            ],
+            "customers": 35
+          },
+          {
+            "path": [
+              "add_to_cart",
+              "support"
+            ],
+            "customers": 34
+          },
+          {
+            "path": [
+              "support",
+              "email_open"
+            ],
+            "customers": 24
+          },
+          {
+            "path": [
+              "review",
+              "email_open"
+            ],
+            "customers": 19
+          }
+        ]
+      },
+      "evidence_ids": [
+        "analytics:patterns"
+      ],
+      "limitations": [
+        "Local deterministic summary; no external LLM was called.",
+        "Synthetic data is for demonstration."
+      ]
+    },
+    "orchestrator": {
+      "completed_agents": [
+        "profiling",
+        "tracking",
+        "graph",
+        "behavior",
+        "segmentation",
+        "prediction",
+        "recommendation",
+        "insight"
+      ],
+      "sensitive_actions_executed": 0,
+      "routing": "Prediction runs only when enabled; customer-scoped or population-scoped analysis"
+    }
+  },
+  "error": null
+}

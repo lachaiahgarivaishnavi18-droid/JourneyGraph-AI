@@ -1,0 +1,47 @@
+services:
+  app:
+    build: .
+    ports:
+      - "127.0.0.1:8000:8000"
+    environment:
+      APP_ENV: ${APP_ENV:-development}
+      ADMIN_EMAIL: ${ADMIN_EMAIL:-admin@journeygraph.local}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:-}
+      JWT_SECRET: ${JWT_SECRET:-}
+      DATABASE_URL: ${DATABASE_URL:-sqlite:////app/storage/journeygraph.db}
+      CHECKPOINT_DB: /app/storage/checkpoints.db
+      SEED_DEMO: ${SEED_DEMO:-true}
+      LLM_API_KEY: ${LLM_API_KEY:-}
+      LLM_BASE_URL: ${LLM_BASE_URL:-https://api.openai.com/v1}
+      LLM_MODEL: ${LLM_MODEL:-gpt-4.1-mini}
+      NEO4J_URI: ${NEO4J_URI:-}
+      NEO4J_USER: ${NEO4J_USER:-neo4j}
+      NEO4J_PASSWORD: ${NEO4J_PASSWORD:-}
+    volumes:
+      - journeygraph:/app/storage
+    restart: unless-stopped
+  postgres:
+    image: postgres:17-alpine
+    profiles: [postgres]
+    environment:
+      POSTGRES_DB: journeygraph
+      POSTGRES_USER: journeygraph
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-}
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: [CMD-SHELL, pg_isready -U journeygraph]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+  neo4j:
+    image: neo4j:5-community
+    profiles: [neo4j]
+    environment:
+      NEO4J_AUTH: neo4j/${NEO4J_PASSWORD:-}
+    volumes:
+      - neo4j:/data
+volumes:
+  journeygraph:
+  postgres:
+  neo4j:

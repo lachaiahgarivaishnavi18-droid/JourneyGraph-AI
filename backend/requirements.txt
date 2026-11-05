@@ -1,0 +1,15 @@
+fastapi>=0.115,<1
+uvicorn>=0.34,<1
+sqlalchemy>=2.0,<3
+alembic>=1.14,<2
+pydantic>=2.10,<3
+PyJWT>=2.10,<3
+python-multipart>=0.0.20,<1
+httpx>=0.28,<1
+networkx>=3.4,<4
+langgraph>=1.0,<2
+langgraph-checkpoint-sqlite>=3,<4
+scikit-learn>=1.6,<2
+pytest>=8,<10
+neo4j>=5,<7
+psycopg[binary]>=3.2,<4

@@ -1,0 +1,6 @@
+[
+  {"event_id":"DEMO-IMPORT-E01","customer_id":"DEMO-IMPORT-001","event_type":"website_visit","entity_id":"P001","channel":"website","event_time":"2026-11-01T10:00:00Z","properties":{"synthetic":true}},
+  {"event_id":"DEMO-IMPORT-E02","customer_id":"DEMO-IMPORT-001","event_type":"product_view","entity_id":"P001","channel":"website","event_time":"2026-11-01T10:04:00Z","properties":{"synthetic":true}},
+  {"event_id":"DEMO-IMPORT-E03","customer_id":"DEMO-IMPORT-001","event_type":"add_to_cart","entity_id":"P001","channel":"mobile","event_time":"2026-11-01T10:08:00Z","properties":{"synthetic":true}},
+  {"event_id":"DEMO-IMPORT-E04","customer_id":"DEMO-IMPORT-001","event_type":"purchase","entity_id":"P001","channel":"mobile","event_time":"2026-11-01T10:12:00Z","properties":{"amount":149,"synthetic":true}}
+]

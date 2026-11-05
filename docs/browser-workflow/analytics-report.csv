@@ -1,0 +1,13 @@
+metric,value
+total_customers,121
+active_customers,97
+conversion_rate,93.39
+dropoff_rate,5.83
+total_interactions,6447
+average_journey_days,145.71
+average_touchpoints,53.28
+repeat_purchase_rate,87.61
+retention_rate,80.17
+inactivity_rate,19.83
+net_revenue,77625.0
+observed_value_per_customer,641.53

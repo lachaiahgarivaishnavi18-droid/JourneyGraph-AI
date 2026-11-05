@@ -1,0 +1,1806 @@
+{
+  "id": "8eb0a987-2d56-4a54-84bf-079466f6eb0a",
+  "title": "Analytics Reports \u2014 11/5/2026",
+  "data": {
+    "metrics": {
+      "total_customers": 121,
+      "active_customers": 97,
+      "conversion_rate": 93.39,
+      "dropoff_rate": 5.83,
+      "total_interactions": 6447,
+      "average_journey_days": 145.71,
+      "average_touchpoints": 53.28,
+      "repeat_purchase_rate": 87.61,
+      "retention_rate": 80.17,
+      "inactivity_rate": 19.83,
+      "net_revenue": 77625.0,
+      "observed_value_per_customer": 641.53
+    },
+    "definitions": {
+      "population": "All registered customers",
+      "conversion_rate": "Distinct purchasing customers / population",
+      "active_customers": "Customers with an event within 30 days of latest matching event",
+      "dropoff_rate": "Cart customers with no purchase in selected period / cart customers; descriptive, not causal",
+      "retention_rate": "30-day active share; activity proxy, not longitudinal retention",
+      "observed_value_per_customer": "Net recorded purchase/return value / population; not predicted lifetime value",
+      "reference_time": "2026-11-04T19:20:00.000000Z",
+      "funnel": "Ordered first visit \u2192 view \u2192 cart \u2192 purchase per customer in filtered events"
+    },
+    "funnel": [
+      {
+        "stage": "Visit",
+        "customers": 121,
+        "dropoff": 0
+      },
+      {
+        "stage": "View",
+        "customers": 121,
+        "dropoff": 0.0
+      },
+      {
+        "stage": "Cart",
+        "customers": 120,
+        "dropoff": 0.83
+      },
+      {
+        "stage": "Purchase",
+        "customers": 113,
+        "dropoff": 5.83
+      }
+    ],
+    "channels": [
+      {
+        "channel": "ads",
+        "interactions": 1122,
+        "customers": 115,
+        "conversions": 73,
+        "conversion_rate": 63.48
+      },
+      {
+        "channel": "email",
+        "interactions": 1638,
+        "customers": 117,
+        "conversions": 76,
+        "conversion_rate": 64.96
+      },
+      {
+        "channel": "mobile",
+        "interactions": 1189,
+        "customers": 116,
+        "conversions": 77,
+        "conversion_rate": 66.38
+      },
+      {
+        "channel": "social",
+        "interactions": 1166,
+        "customers": 112,
+        "conversions": 72,
+        "conversion_rate": 64.29
+      },
+      {
+        "channel": "support",
+        "interactions": 140,
+        "customers": 80,
+        "conversions": 0,
+        "conversion_rate": 0.0
+      },
+      {
+        "channel": "website",
+        "interactions": 1192,
+        "customers": 112,
+        "conversions": 75,
+        "conversion_rate": 66.96
+      }
+    ],
+    "trend": [
+      {
+        "date": "2026-05-09",
+        "interactions": 24,
+        "purchases": 2,
+        "revenue": 268.0
+      },
+      {
+        "date": "2026-05-10",
+        "interactions": 34,
+        "purchases": 3,
+        "revenue": 497.0
+      },
+      {
+        "date": "2026-05-11",
+        "interactions": 68,
+        "purchases": 6,
+        "revenue": 534.0
+      },
+      {
+        "date": "2026-05-12",
+        "interactions": 33,
+        "purchases": 1,
+        "revenue": 89.0
+      },
+      {
+        "date": "2026-05-13",
+        "interactions": 44,
+        "purchases": 8,
+        "revenue": 1222.0
+      },
+      {
+        "date": "2026-05-14",
+        "interactions": 52,
+        "purchases": 6,
+        "revenue": 644.0
+      },
+      {
+        "date": "2026-05-15",
+        "interactions": 48,
+        "purchases": 8,
+        "revenue": 1452.0
+      },
+      {
+        "date": "2026-05-16",
+        "interactions": 20,
+        "purchases": 1,
+        "revenue": 149.0
+      },
+      {
+        "date": "2026-05-17",
+        "interactions": 32,
+        "purchases": 3,
+        "revenue": 297.0
+      },
+      {
+        "date": "2026-05-18",
+        "interactions": 50,
+        "purchases": 3,
+        "revenue": 387.0
+      },
+      {
+        "date": "2026-05-19",
+        "interactions": 53,
+        "purchases": 5,
+        "revenue": 575.0
+      },
+      {
+        "date": "2026-05-20",
+        "interactions": 43,
+        "purchases": 3,
+        "revenue": 357.0
+      },
+      {
+        "date": "2026-05-21",
+        "interactions": 45,
+        "purchases": 5,
+        "revenue": 695.0
+      },
+      {
+        "date": "2026-05-22",
+        "interactions": 36,
+        "purchases": 5,
+        "revenue": 595.0
+      },
+      {
+        "date": "2026-05-23",
+        "interactions": 62,
+        "purchases": 6,
+        "revenue": 934.0
+      },
+      {
+        "date": "2026-05-24",
+        "interactions": 38,
+        "purchases": 2,
+        "revenue": 118.0
+      },
+      {
+        "date": "2026-05-25",
+        "interactions": 20,
+        "purchases": 2,
+        "revenue": 188.0
+      },
+      {
+        "date": "2026-05-26",
+        "interactions": 48,
+        "purchases": 3,
+        "revenue": 287.0
+      },
+      {
+        "date": "2026-05-27",
+        "interactions": 44,
+        "purchases": 4,
+        "revenue": 456.0
+      },
+      {
+        "date": "2026-05-28",
+        "interactions": 24,
+        "purchases": 3,
+        "revenue": 477.0
+      },
+      {
+        "date": "2026-05-29",
+        "interactions": 22,
+        "purchases": 2,
+        "revenue": 158.0
+      },
+      {
+        "date": "2026-05-30",
+        "interactions": 46,
+        "purchases": 4,
+        "revenue": 446.0
+      },
+      {
+        "date": "2026-05-31",
+        "interactions": 19,
+        "purchases": 1,
+        "revenue": 89.0
+      },
+      {
+        "date": "2026-06-01",
+        "interactions": 45,
+        "purchases": 5,
+        "revenue": 595.0
+      },
+      {
+        "date": "2026-06-02",
+        "interactions": 25,
+        "purchases": 1,
+        "revenue": 59.0
+      },
+      {
+        "date": "2026-06-03",
+        "interactions": 28,
+        "purchases": 3,
+        "revenue": 447.0
+      },
+      {
+        "date": "2026-06-04",
+        "interactions": 40,
+        "purchases": 5,
+        "revenue": 655.0
+      },
+      {
+        "date": "2026-06-05",
+        "interactions": 42,
+        "purchases": 7,
+        "revenue": 803.0
+      },
+      {
+        "date": "2026-06-06",
+        "interactions": 37,
+        "purchases": 5,
+        "revenue": 685.0
+      },
+      {
+        "date": "2026-06-07",
+        "interactions": 48,
+        "purchases": 6,
+        "revenue": 674.0
+      },
+      {
+        "date": "2026-06-08",
+        "interactions": 48,
+        "purchases": 4,
+        "revenue": 666.0
+      },
+      {
+        "date": "2026-06-09",
+        "interactions": 49,
+        "purchases": 5,
+        "revenue": 675.0
+      },
+      {
+        "date": "2026-06-10",
+        "interactions": 35,
+        "purchases": 3,
+        "revenue": 467.0
+      },
+      {
+        "date": "2026-06-11",
+        "interactions": 54,
+        "purchases": 4,
+        "revenue": 396.0
+      },
+      {
+        "date": "2026-06-12",
+        "interactions": 45,
+        "purchases": 5,
+        "revenue": 585.0
+      },
+      {
+        "date": "2026-06-13",
+        "interactions": 22,
+        "purchases": 2,
+        "revenue": 208.0
+      },
+      {
+        "date": "2026-06-14",
+        "interactions": 37,
+        "purchases": 4,
+        "revenue": 306.0
+      },
+      {
+        "date": "2026-06-15",
+        "interactions": 40,
+        "purchases": 5,
+        "revenue": 545.0
+      },
+      {
+        "date": "2026-06-16",
+        "interactions": 33,
+        "purchases": 4,
+        "revenue": 356.0
+      },
+      {
+        "date": "2026-06-17",
+        "interactions": 48,
+        "purchases": 5,
+        "revenue": 825.0
+      },
+      {
+        "date": "2026-06-18",
+        "interactions": 33,
+        "purchases": 2,
+        "revenue": 248.0
+      },
+      {
+        "date": "2026-06-19",
+        "interactions": 48,
+        "purchases": 7,
+        "revenue": 813.0
+      },
+      {
+        "date": "2026-06-20",
+        "interactions": 38,
+        "purchases": 4,
+        "revenue": 556.0
+      },
+      {
+        "date": "2026-06-21",
+        "interactions": 46,
+        "purchases": 4,
+        "revenue": 396.0
+      },
+      {
+        "date": "2026-06-22",
+        "interactions": 57,
+        "purchases": 10,
+        "revenue": 1400.0
+      },
+      {
+        "date": "2026-06-23",
+        "interactions": 43,
+        "purchases": 7,
+        "revenue": 803.0
+      },
+      {
+        "date": "2026-06-24",
+        "interactions": 28,
+        "purchases": 4,
+        "revenue": 406.0
+      },
+      {
+        "date": "2026-06-25",
+        "interactions": 47,
+        "purchases": 4,
+        "revenue": 356.0
+      },
+      {
+        "date": "2026-06-26",
+        "interactions": 33,
+        "purchases": 6,
+        "revenue": 804.0
+      },
+      {
+        "date": "2026-06-27",
+        "interactions": 46,
+        "purchases": 3,
+        "revenue": 247.0
+      },
+      {
+        "date": "2026-06-28",
+        "interactions": 40,
+        "purchases": 5,
+        "revenue": 715.0
+      },
+      {
+        "date": "2026-06-29",
+        "interactions": 40,
+        "purchases": 2,
+        "revenue": 268.0
+      },
+      {
+        "date": "2026-06-30",
+        "interactions": 32,
+        "purchases": 5,
+        "revenue": 615.0
+      },
+      {
+        "date": "2026-07-01",
+        "interactions": 16,
+        "purchases": 1,
+        "revenue": 89.0
+      },
+      {
+        "date": "2026-07-02",
+        "interactions": 54,
+        "purchases": 8,
+        "revenue": 802.0
+      },
+      {
+        "date": "2026-07-03",
+        "interactions": 53,
+        "purchases": 6,
+        "revenue": 744.0
+      },
+      {
+        "date": "2026-07-04",
+        "interactions": 29,
+        "purchases": 3,
+        "revenue": 387.0
+      },
+      {
+        "date": "2026-07-05",
+        "interactions": 29,
+        "purchases": 2,
+        "revenue": 158.0
+      },
+      {
+        "date": "2026-07-06",
+        "interactions": 34,
+        "purchases": 3,
+        "revenue": 327.0
+      },
+      {
+        "date": "2026-07-07",
+        "interactions": 59,
+        "purchases": 5,
+        "revenue": 485.0
+      },
+      {
+        "date": "2026-07-08",
+        "interactions": 34,
+        "purchases": 4,
+        "revenue": 306.0
+      },
+      {
+        "date": "2026-07-09",
+        "interactions": 33,
+        "purchases": 2,
+        "revenue": 348.0
+      },
+      {
+        "date": "2026-07-10",
+        "interactions": 32,
+        "purchases": 2,
+        "revenue": 148.0
+      },
+      {
+        "date": "2026-07-11",
+        "interactions": 40,
+        "purchases": 5,
+        "revenue": 855.0
+      },
+      {
+        "date": "2026-07-12",
+        "interactions": 31,
+        "purchases": 2,
+        "revenue": 208.0
+      },
+      {
+        "date": "2026-07-13",
+        "interactions": 19,
+        "purchases": 1,
+        "revenue": 149.0
+      },
+      {
+        "date": "2026-07-14",
+        "interactions": 41,
+        "purchases": 3,
+        "revenue": 317.0
+      },
+      {
+        "date": "2026-07-15",
+        "interactions": 35,
+        "purchases": 4,
+        "revenue": 416.0
+      },
+      {
+        "date": "2026-07-16",
+        "interactions": 44,
+        "purchases": 3,
+        "revenue": 307.0
+      },
+      {
+        "date": "2026-07-17",
+        "interactions": 35,
+        "purchases": 4,
+        "revenue": 506.0
+      },
+      {
+        "date": "2026-07-18",
+        "interactions": 24,
+        "purchases": 1,
+        "revenue": 99.0
+      },
+      {
+        "date": "2026-07-19",
+        "interactions": 23,
+        "purchases": 1,
+        "revenue": 89.0
+      },
+      {
+        "date": "2026-07-20",
+        "interactions": 49,
+        "purchases": 6,
+        "revenue": 614.0
+      },
+      {
+        "date": "2026-07-21",
+        "interactions": 47,
+        "purchases": 5,
+        "revenue": 625.0
+      },
+      {
+        "date": "2026-07-22",
+        "interactions": 33,
+        "purchases": 4,
+        "revenue": 536.0
+      },
+      {
+        "date": "2026-07-23",
+        "interactions": 38,
+        "purchases": 4,
+        "revenue": 536.0
+      },
+      {
+        "date": "2026-07-24",
+        "interactions": 41,
+        "purchases": 4,
+        "revenue": 576.0
+      },
+      {
+        "date": "2026-07-25",
+        "interactions": 37,
+        "purchases": 3,
+        "revenue": 307.0
+      },
+      {
+        "date": "2026-07-26",
+        "interactions": 30,
+        "purchases": 3,
+        "revenue": 607.0
+      },
+      {
+        "date": "2026-07-27",
+        "interactions": 41,
+        "purchases": 6,
+        "revenue": 944.0
+      },
+      {
+        "date": "2026-07-28",
+        "interactions": 26,
+        "purchases": 2,
+        "revenue": 238.0
+      },
+      {
+        "date": "2026-07-29",
+        "interactions": 50,
+        "purchases": 9,
+        "revenue": 951.0
+      },
+      {
+        "date": "2026-07-30",
+        "interactions": 40,
+        "purchases": 2,
+        "revenue": 298.0
+      },
+      {
+        "date": "2026-07-31",
+        "interactions": 51,
+        "purchases": 4,
+        "revenue": 616.0
+      },
+      {
+        "date": "2026-08-01",
+        "interactions": 28,
+        "purchases": 1,
+        "revenue": 89.0
+      },
+      {
+        "date": "2026-08-02",
+        "interactions": 18,
+        "purchases": 2,
+        "revenue": 348.0
+      },
+      {
+        "date": "2026-08-03",
+        "interactions": 49,
+        "purchases": 6,
+        "revenue": 704.0
+      },
+      {
+        "date": "2026-08-04",
+        "interactions": 33,
+        "purchases": 4,
+        "revenue": 506.0
+      },
+      {
+        "date": "2026-08-05",
+        "interactions": 56,
+        "purchases": 7,
+        "revenue": 763.0
+      },
+      {
+        "date": "2026-08-06",
+        "interactions": 34,
+        "purchases": 3,
+        "revenue": 307.0
+      },
+      {
+        "date": "2026-08-07",
+        "interactions": 20,
+        "purchases": 1,
+        "revenue": 89.0
+      },
+      {
+        "date": "2026-08-08",
+        "interactions": 15,
+        "purchases": 1,
+        "revenue": 149.0
+      },
+      {
+        "date": "2026-08-09",
+        "interactions": 23,
+        "purchases": 1,
+        "revenue": 89.0
+      },
+      {
+        "date": "2026-08-10",
+        "interactions": 50,
+        "purchases": 7,
+        "revenue": 823.0
+      },
+      {
+        "date": "2026-08-11",
+        "interactions": 20,
+        "purchases": 2,
+        "revenue": 148.0
+      },
+      {
+        "date": "2026-08-12",
+        "interactions": 43,
+        "purchases": 6,
+        "revenue": 824.0
+      },
+      {
+        "date": "2026-08-13",
+        "interactions": 56,
+        "purchases": 10,
+        "revenue": 1140.0
+      },
+      {
+        "date": "2026-08-14",
+        "interactions": 16,
+        "purchases": 1,
+        "revenue": 119.0
+      },
+      {
+        "date": "2026-08-15",
+        "interactions": 32,
+        "purchases": 4,
+        "revenue": 366.0
+      },
+      {
+        "date": "2026-08-16",
+        "interactions": 31,
+        "purchases": 5,
+        "revenue": 505.0
+      },
+      {
+        "date": "2026-08-17",
+        "interactions": 34,
+        "purchases": 4,
+        "revenue": 496.0
+      },
+      {
+        "date": "2026-08-18",
+        "interactions": 32,
+        "purchases": 4,
+        "revenue": 586.0
+      },
+      {
+        "date": "2026-08-19",
+        "interactions": 43,
+        "purchases": 3,
+        "revenue": 347.0
+      },
+      {
+        "date": "2026-08-20",
+        "interactions": 29,
+        "purchases": 4,
+        "revenue": 306.0
+      },
+      {
+        "date": "2026-08-21",
+        "interactions": 33,
+        "purchases": 4,
+        "revenue": 396.0
+      },
+      {
+        "date": "2026-08-22",
+        "interactions": 36,
+        "purchases": 6,
+        "revenue": 764.0
+      },
+      {
+        "date": "2026-08-23",
+        "interactions": 22,
+        "purchases": 3,
+        "revenue": 387.0
+      },
+      {
+        "date": "2026-08-24",
+        "interactions": 36,
+        "purchases": 5,
+        "revenue": 785.0
+      },
+      {
+        "date": "2026-08-25",
+        "interactions": 31,
+        "purchases": 3,
+        "revenue": 287.0
+      },
+      {
+        "date": "2026-08-26",
+        "interactions": 35,
+        "purchases": 4,
+        "revenue": 416.0
+      },
+      {
+        "date": "2026-08-27",
+        "interactions": 39,
+        "purchases": 4,
+        "revenue": 576.0
+      },
+      {
+        "date": "2026-08-28",
+        "interactions": 40,
+        "purchases": 6,
+        "revenue": 744.0
+      },
+      {
+        "date": "2026-08-29",
+        "interactions": 30,
+        "purchases": 1,
+        "revenue": 89.0
+      },
+      {
+        "date": "2026-08-30",
+        "interactions": 50,
+        "purchases": 5,
+        "revenue": 795.0
+      },
+      {
+        "date": "2026-08-31",
+        "interactions": 30,
+        "purchases": 2,
+        "revenue": 158.0
+      },
+      {
+        "date": "2026-09-01",
+        "interactions": 35,
+        "purchases": 6,
+        "revenue": 784.0
+      },
+      {
+        "date": "2026-09-02",
+        "interactions": 37,
+        "purchases": 5,
+        "revenue": 755.0
+      },
+      {
+        "date": "2026-09-03",
+        "interactions": 23,
+        "purchases": 2,
+        "revenue": 458.0
+      },
+      {
+        "date": "2026-09-04",
+        "interactions": 47,
+        "purchases": 6,
+        "revenue": 514.0
+      },
+      {
+        "date": "2026-09-05",
+        "interactions": 27,
+        "purchases": 6,
+        "revenue": 734.0
+      },
+      {
+        "date": "2026-09-06",
+        "interactions": 34,
+        "purchases": 4,
+        "revenue": 366.0
+      },
+      {
+        "date": "2026-09-07",
+        "interactions": 38,
+        "purchases": 6,
+        "revenue": 844.0
+      },
+      {
+        "date": "2026-09-08",
+        "interactions": 21,
+        "purchases": 1,
+        "revenue": 119.0
+      },
+      {
+        "date": "2026-09-09",
+        "interactions": 48,
+        "purchases": 6,
+        "revenue": 624.0
+      },
+      {
+        "date": "2026-09-10",
+        "interactions": 39,
+        "purchases": 6,
+        "revenue": 894.0
+      },
+      {
+        "date": "2026-09-11",
+        "interactions": 35,
+        "purchases": 4,
+        "revenue": 406.0
+      },
+      {
+        "date": "2026-09-12",
+        "interactions": 31,
+        "purchases": 3,
+        "revenue": 337.0
+      },
+      {
+        "date": "2026-09-13",
+        "interactions": 29,
+        "purchases": 3,
+        "revenue": 307.0
+      },
+      {
+        "date": "2026-09-14",
+        "interactions": 36,
+        "purchases": 3,
+        "revenue": 297.0
+      },
+      {
+        "date": "2026-09-15",
+        "interactions": 34,
+        "purchases": 5,
+        "revenue": 525.0
+      },
+      {
+        "date": "2026-09-16",
+        "interactions": 40,
+        "purchases": 3,
+        "revenue": 237.0
+      },
+      {
+        "date": "2026-09-17",
+        "interactions": 22,
+        "purchases": 1,
+        "revenue": 89.0
+      },
+      {
+        "date": "2026-09-18",
+        "interactions": 29,
+        "purchases": 4,
+        "revenue": 466.0
+      },
+      {
+        "date": "2026-09-19",
+        "interactions": 41,
+        "purchases": 6,
+        "revenue": 824.0
+      },
+      {
+        "date": "2026-09-20",
+        "interactions": 30,
+        "purchases": 2,
+        "revenue": 288.0
+      },
+      {
+        "date": "2026-09-21",
+        "interactions": 32,
+        "purchases": 3,
+        "revenue": 387.0
+      },
+      {
+        "date": "2026-09-22",
+        "interactions": 53,
+        "purchases": 8,
+        "revenue": 972.0
+      },
+      {
+        "date": "2026-09-23",
+        "interactions": 34,
+        "purchases": 5,
+        "revenue": 875.0
+      },
+      {
+        "date": "2026-09-24",
+        "interactions": 43,
+        "purchases": 5,
+        "revenue": 455.0
+      },
+      {
+        "date": "2026-09-25",
+        "interactions": 40,
+        "purchases": 4,
+        "revenue": 506.0
+      },
+      {
+        "date": "2026-09-26",
+        "interactions": 41,
+        "purchases": 6,
+        "revenue": 864.0
+      },
+      {
+        "date": "2026-09-27",
+        "interactions": 15,
+        "purchases": 1,
+        "revenue": 89.0
+      },
+      {
+        "date": "2026-09-28",
+        "interactions": 21,
+        "purchases": 4,
+        "revenue": 396.0
+      },
+      {
+        "date": "2026-09-29",
+        "interactions": 45,
+        "purchases": 6,
+        "revenue": 904.0
+      },
+      {
+        "date": "2026-09-30",
+        "interactions": 37,
+        "purchases": 5,
+        "revenue": 855.0
+      },
+      {
+        "date": "2026-10-01",
+        "interactions": 40,
+        "purchases": 5,
+        "revenue": 505.0
+      },
+      {
+        "date": "2026-10-02",
+        "interactions": 24,
+        "purchases": 3,
+        "revenue": 387.0
+      },
+      {
+        "date": "2026-10-03",
+        "interactions": 24,
+        "purchases": 3,
+        "revenue": 357.0
+      },
+      {
+        "date": "2026-10-04",
+        "interactions": 45,
+        "purchases": 3,
+        "revenue": 407.0
+      },
+      {
+        "date": "2026-10-05",
+        "interactions": 17,
+        "purchases": 0,
+        "revenue": 0
+      },
+      {
+        "date": "2026-10-06",
+        "interactions": 57,
+        "purchases": 8,
+        "revenue": 1092.0
+      },
+      {
+        "date": "2026-10-07",
+        "interactions": 44,
+        "purchases": 3,
+        "revenue": 407.0
+      },
+      {
+        "date": "2026-10-08",
+        "interactions": 31,
+        "purchases": 5,
+        "revenue": 655.0
+      },
+      {
+        "date": "2026-10-09",
+        "interactions": 17,
+        "purchases": 2,
+        "revenue": 198.0
+      },
+      {
+        "date": "2026-10-10",
+        "interactions": 35,
+        "purchases": 4,
+        "revenue": 326.0
+      },
+      {
+        "date": "2026-10-11",
+        "interactions": 35,
+        "purchases": 6,
+        "revenue": 574.0
+      },
+      {
+        "date": "2026-10-12",
+        "interactions": 35,
+        "purchases": 5,
+        "revenue": 525.0
+      },
+      {
+        "date": "2026-10-13",
+        "interactions": 26,
+        "purchases": 3,
+        "revenue": 367.0
+      },
+      {
+        "date": "2026-10-14",
+        "interactions": 15,
+        "purchases": 0,
+        "revenue": 0
+      },
+      {
+        "date": "2026-10-15",
+        "interactions": 26,
+        "purchases": 2,
+        "revenue": 208.0
+      },
+      {
+        "date": "2026-10-16",
+        "interactions": 32,
+        "purchases": 5,
+        "revenue": 705.0
+      },
+      {
+        "date": "2026-10-17",
+        "interactions": 14,
+        "purchases": 3,
+        "revenue": 297.0
+      },
+      {
+        "date": "2026-10-18",
+        "interactions": 41,
+        "purchases": 5,
+        "revenue": 815.0
+      },
+      {
+        "date": "2026-10-19",
+        "interactions": 31,
+        "purchases": 4,
+        "revenue": 606.0
+      },
+      {
+        "date": "2026-10-20",
+        "interactions": 31,
+        "purchases": 1,
+        "revenue": 119.0
+      },
+      {
+        "date": "2026-10-21",
+        "interactions": 29,
+        "purchases": 3,
+        "revenue": 497.0
+      },
+      {
+        "date": "2026-10-22",
+        "interactions": 42,
+        "purchases": 6,
+        "revenue": 564.0
+      },
+      {
+        "date": "2026-10-23",
+        "interactions": 36,
+        "purchases": 6,
+        "revenue": 764.0
+      },
+      {
+        "date": "2026-10-24",
+        "interactions": 29,
+        "purchases": 3,
+        "revenue": 577.0
+      },
+      {
+        "date": "2026-10-25",
+        "interactions": 35,
+        "purchases": 4,
+        "revenue": 396.0
+      },
+      {
+        "date": "2026-10-26",
+        "interactions": 40,
+        "purchases": 5,
+        "revenue": 705.0
+      },
+      {
+        "date": "2026-10-27",
+        "interactions": 45,
+        "purchases": 3,
+        "revenue": 347.0
+      },
+      {
+        "date": "2026-10-28",
+        "interactions": 14,
+        "purchases": 2,
+        "revenue": 158.0
+      },
+      {
+        "date": "2026-10-29",
+        "interactions": 15,
+        "purchases": 2,
+        "revenue": 188.0
+      },
+      {
+        "date": "2026-10-30",
+        "interactions": 47,
+        "purchases": 7,
+        "revenue": 983.0
+      },
+      {
+        "date": "2026-10-31",
+        "interactions": 21,
+        "purchases": 5,
+        "revenue": 695.0
+      },
+      {
+        "date": "2026-11-01",
+        "interactions": 41,
+        "purchases": 4,
+        "revenue": 386.0
+      },
+      {
+        "date": "2026-11-02",
+        "interactions": 34,
+        "purchases": 2,
+        "revenue": 208.0
+      },
+      {
+        "date": "2026-11-03",
+        "interactions": 43,
+        "purchases": 4,
+        "revenue": 346.0
+      },
+      {
+        "date": "2026-11-04",
+        "interactions": 15,
+        "purchases": 2,
+        "revenue": 378.0
+      }
+    ],
+    "segments": [
+      {
+        "name": "Champions",
+        "customers": 73
+      },
+      {
+        "name": "Inactive",
+        "customers": 23
+      },
+      {
+        "name": "Returning",
+        "customers": 16
+      },
+      {
+        "name": "New buyers",
+        "customers": 7
+      },
+      {
+        "name": "Explorers",
+        "customers": 2
+      }
+    ],
+    "segment_conversion": [
+      {
+        "segment": "Champions",
+        "customers": 73,
+        "purchasing_customers": 73,
+        "conversion_rate": 100.0
+      },
+      {
+        "segment": "Inactive",
+        "customers": 23,
+        "purchasing_customers": 17,
+        "conversion_rate": 73.91
+      },
+      {
+        "segment": "Returning",
+        "customers": 16,
+        "purchasing_customers": 16,
+        "conversion_rate": 100.0
+      },
+      {
+        "segment": "New buyers",
+        "customers": 7,
+        "purchasing_customers": 7,
+        "conversion_rate": 100.0
+      },
+      {
+        "segment": "Explorers",
+        "customers": 2,
+        "purchasing_customers": 0,
+        "conversion_rate": 0.0
+      }
+    ],
+    "paths": [
+      {
+        "path": "website_visit \u2192 product_view \u2192 add_to_cart \u2192 purchase \u2192 website_visit \u2192 product_view",
+        "customers": 16
+      },
+      {
+        "path": "website_visit \u2192 product_view \u2192 add_to_cart \u2192 website_visit \u2192 product_view \u2192 add_to_cart",
+        "customers": 11
+      },
+      {
+        "path": "website_visit \u2192 product_view \u2192 website_visit \u2192 product_view \u2192 website_visit \u2192 product_view",
+        "customers": 10
+      },
+      {
+        "path": "website_visit \u2192 product_view \u2192 website_visit \u2192 product_view \u2192 add_to_cart \u2192 purchase",
+        "customers": 10
+      },
+      {
+        "path": "email_open \u2192 website_visit \u2192 product_view \u2192 add_to_cart \u2192 website_visit \u2192 product_view",
+        "customers": 8
+      },
+      {
+        "path": "website_visit \u2192 product_view \u2192 add_to_cart \u2192 email_open \u2192 website_visit \u2192 product_view",
+        "customers": 7
+      },
+      {
+        "path": "website_visit \u2192 product_view \u2192 add_to_cart \u2192 website_visit \u2192 product_view \u2192 website_visit",
+        "customers": 6
+      },
+      {
+        "path": "email_open \u2192 website_visit \u2192 product_view \u2192 add_to_cart \u2192 purchase \u2192 website_visit",
+        "customers": 5
+      },
+      {
+        "path": "website_visit \u2192 product_view \u2192 add_to_cart \u2192 purchase \u2192 review \u2192 website_visit",
+        "customers": 4
+      },
+      {
+        "path": "website_visit \u2192 product_view \u2192 add_to_cart \u2192 purchase \u2192 email_open \u2192 website_visit",
+        "customers": 4
+      }
+    ],
+    "cohorts": [
+      {
+        "month": "2026-05",
+        "customers": 104,
+        "converted": 98,
+        "repeat": 87
+      },
+      {
+        "month": "2026-06",
+        "customers": 16,
+        "converted": 14,
+        "repeat": 12
+      },
+      {
+        "month": "2026-11",
+        "customers": 1,
+        "converted": 1,
+        "repeat": 0
+      }
+    ],
+    "heatmap": [
+      {
+        "day": 0,
+        "hour": 8,
+        "events": 24
+      },
+      {
+        "day": 0,
+        "hour": 9,
+        "events": 83
+      },
+      {
+        "day": 0,
+        "hour": 10,
+        "events": 70
+      },
+      {
+        "day": 0,
+        "hour": 11,
+        "events": 64
+      },
+      {
+        "day": 0,
+        "hour": 12,
+        "events": 52
+      },
+      {
+        "day": 0,
+        "hour": 13,
+        "events": 84
+      },
+      {
+        "day": 0,
+        "hour": 14,
+        "events": 82
+      },
+      {
+        "day": 0,
+        "hour": 15,
+        "events": 122
+      },
+      {
+        "day": 0,
+        "hour": 16,
+        "events": 66
+      },
+      {
+        "day": 0,
+        "hour": 17,
+        "events": 91
+      },
+      {
+        "day": 0,
+        "hour": 18,
+        "events": 44
+      },
+      {
+        "day": 0,
+        "hour": 19,
+        "events": 52
+      },
+      {
+        "day": 0,
+        "hour": 20,
+        "events": 86
+      },
+      {
+        "day": 0,
+        "hour": 21,
+        "events": 74
+      },
+      {
+        "day": 1,
+        "hour": 8,
+        "events": 84
+      },
+      {
+        "day": 1,
+        "hour": 9,
+        "events": 82
+      },
+      {
+        "day": 1,
+        "hour": 10,
+        "events": 59
+      },
+      {
+        "day": 1,
+        "hour": 11,
+        "events": 85
+      },
+      {
+        "day": 1,
+        "hour": 12,
+        "events": 55
+      },
+      {
+        "day": 1,
+        "hour": 13,
+        "events": 69
+      },
+      {
+        "day": 1,
+        "hour": 14,
+        "events": 65
+      },
+      {
+        "day": 1,
+        "hour": 15,
+        "events": 61
+      },
+      {
+        "day": 1,
+        "hour": 16,
+        "events": 76
+      },
+      {
+        "day": 1,
+        "hour": 17,
+        "events": 95
+      },
+      {
+        "day": 1,
+        "hour": 18,
+        "events": 66
+      },
+      {
+        "day": 1,
+        "hour": 19,
+        "events": 48
+      },
+      {
+        "day": 1,
+        "hour": 20,
+        "events": 81
+      },
+      {
+        "day": 1,
+        "hour": 21,
+        "events": 69
+      },
+      {
+        "day": 2,
+        "hour": 8,
+        "events": 58
+      },
+      {
+        "day": 2,
+        "hour": 9,
+        "events": 71
+      },
+      {
+        "day": 2,
+        "hour": 10,
+        "events": 66
+      },
+      {
+        "day": 2,
+        "hour": 11,
+        "events": 51
+      },
+      {
+        "day": 2,
+        "hour": 12,
+        "events": 67
+      },
+      {
+        "day": 2,
+        "hour": 13,
+        "events": 90
+      },
+      {
+        "day": 2,
+        "hour": 14,
+        "events": 77
+      },
+      {
+        "day": 2,
+        "hour": 15,
+        "events": 44
+      },
+      {
+        "day": 2,
+        "hour": 16,
+        "events": 83
+      },
+      {
+        "day": 2,
+        "hour": 17,
+        "events": 83
+      },
+      {
+        "day": 2,
+        "hour": 18,
+        "events": 86
+      },
+      {
+        "day": 2,
+        "hour": 19,
+        "events": 58
+      },
+      {
+        "day": 2,
+        "hour": 20,
+        "events": 42
+      },
+      {
+        "day": 2,
+        "hour": 21,
+        "events": 52
+      },
+      {
+        "day": 3,
+        "hour": 8,
+        "events": 68
+      },
+      {
+        "day": 3,
+        "hour": 9,
+        "events": 65
+      },
+      {
+        "day": 3,
+        "hour": 10,
+        "events": 68
+      },
+      {
+        "day": 3,
+        "hour": 11,
+        "events": 76
+      },
+      {
+        "day": 3,
+        "hour": 12,
+        "events": 72
+      },
+      {
+        "day": 3,
+        "hour": 13,
+        "events": 73
+      },
+      {
+        "day": 3,
+        "hour": 14,
+        "events": 76
+      },
+      {
+        "day": 3,
+        "hour": 15,
+        "events": 85
+      },
+      {
+        "day": 3,
+        "hour": 16,
+        "events": 60
+      },
+      {
+        "day": 3,
+        "hour": 17,
+        "events": 43
+      },
+      {
+        "day": 3,
+        "hour": 18,
+        "events": 79
+      },
+      {
+        "day": 3,
+        "hour": 19,
+        "events": 79
+      },
+      {
+        "day": 3,
+        "hour": 20,
+        "events": 60
+      },
+      {
+        "day": 3,
+        "hour": 21,
+        "events": 37
+      },
+      {
+        "day": 3,
+        "hour": 22,
+        "events": 2
+      },
+      {
+        "day": 4,
+        "hour": 8,
+        "events": 82
+      },
+      {
+        "day": 4,
+        "hour": 9,
+        "events": 58
+      },
+      {
+        "day": 4,
+        "hour": 10,
+        "events": 78
+      },
+      {
+        "day": 4,
+        "hour": 11,
+        "events": 53
+      },
+      {
+        "day": 4,
+        "hour": 12,
+        "events": 44
+      },
+      {
+        "day": 4,
+        "hour": 13,
+        "events": 60
+      },
+      {
+        "day": 4,
+        "hour": 14,
+        "events": 85
+      },
+      {
+        "day": 4,
+        "hour": 15,
+        "events": 54
+      },
+      {
+        "day": 4,
+        "hour": 16,
+        "events": 62
+      },
+      {
+        "day": 4,
+        "hour": 17,
+        "events": 76
+      },
+      {
+        "day": 4,
+        "hour": 18,
+        "events": 61
+      },
+      {
+        "day": 4,
+        "hour": 19,
+        "events": 79
+      },
+      {
+        "day": 4,
+        "hour": 20,
+        "events": 62
+      },
+      {
+        "day": 4,
+        "hour": 21,
+        "events": 47
+      },
+      {
+        "day": 4,
+        "hour": 22,
+        "events": 1
+      },
+      {
+        "day": 5,
+        "hour": 8,
+        "events": 62
+      },
+      {
+        "day": 5,
+        "hour": 9,
+        "events": 38
+      },
+      {
+        "day": 5,
+        "hour": 10,
+        "events": 62
+      },
+      {
+        "day": 5,
+        "hour": 11,
+        "events": 44
+      },
+      {
+        "day": 5,
+        "hour": 12,
+        "events": 61
+      },
+      {
+        "day": 5,
+        "hour": 13,
+        "events": 83
+      },
+      {
+        "day": 5,
+        "hour": 14,
+        "events": 70
+      },
+      {
+        "day": 5,
+        "hour": 15,
+        "events": 48
+      },
+      {
+        "day": 5,
+        "hour": 16,
+        "events": 38
+      },
+      {
+        "day": 5,
+        "hour": 17,
+        "events": 68
+      },
+      {
+        "day": 5,
+        "hour": 18,
+        "events": 81
+      },
+      {
+        "day": 5,
+        "hour": 19,
+        "events": 56
+      },
+      {
+        "day": 5,
+        "hour": 20,
+        "events": 57
+      },
+      {
+        "day": 5,
+        "hour": 21,
+        "events": 61
+      },
+      {
+        "day": 6,
+        "hour": 8,
+        "events": 47
+      },
+      {
+        "day": 6,
+        "hour": 9,
+        "events": 62
+      },
+      {
+        "day": 6,
+        "hour": 10,
+        "events": 95
+      },
+      {
+        "day": 6,
+        "hour": 11,
+        "events": 73
+      },
+      {
+        "day": 6,
+        "hour": 12,
+        "events": 70
+      },
+      {
+        "day": 6,
+        "hour": 13,
+        "events": 45
+      },
+      {
+        "day": 6,
+        "hour": 14,
+        "events": 68
+      },
+      {
+        "day": 6,
+        "hour": 15,
+        "events": 30
+      },
+      {
+        "day": 6,
+        "hour": 16,
+        "events": 60
+      },
+      {
+        "day": 6,
+        "hour": 17,
+        "events": 72
+      },
+      {
+        "day": 6,
+        "hour": 18,
+        "events": 69
+      },
+      {
+        "day": 6,
+        "hour": 19,
+        "events": 51
+      },
+      {
+        "day": 6,
+        "hour": 20,
+        "events": 37
+      },
+      {
+        "day": 6,
+        "hour": 21,
+        "events": 75
+      },
+      {
+        "day": 6,
+        "hour": 22,
+        "events": 2
+      }
+    ],
+    "sources": {
+      "synthetic-demo": 6447
+    },
+    "report_kind": "analytics"
+  },
+  "created_at": "2026-11-05T04:20:14.188550Z"
+}
